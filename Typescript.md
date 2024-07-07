@@ -63,17 +63,21 @@ const myfun = (n: number, m: number): number => {
 	return n + m;
 };
 ```
-Other method
-```typescript
-type funcType = (n : number , m : number ) => number;
 
-        // when we use funcType infront of the function
-        const newfuction : funcType = (n , m )=> {
-                return n + m ;
-        }
+Other method
+
+```typescript
+type funcType = (n: number, m: number) => number;
+
+// when we use funcType infront of the function
+const newfuction: funcType = (n, m) => {
+	return n + m;
+};
 ```
+
 # Interface
- its some what similar to `type` but interface is like class we can extend it using extend keyword
+
+its some what similar to `type` but interface is like class we can extend it using extend keyword
 
 ```typescript
         interface User {
@@ -100,8 +104,46 @@ type funcType = (n : number , m : number ) => number;
                 name : 'saif',
                 email : 'saif@gmail.com',
                 password : '39043',
-                phone : 90493043,
+               phone : 90493043,
                 bachelor : ture,
 
         }
+```
+
+### Using interface using with function
+
+```typescript
+interface myObject {
+	username: string;
+	email: string;
+	func: (n: number, m: number) => number;
+}
+const obj : myObject = {
+        username : 'Saif',
+        email  :'saif@gamil.com',
+        func : (n , m) => {
+        return m+n;
+        }
+
+
+}
+```
+## Other way of using type and interface
+```typescript
+type myfunction = (n : number , m : number ) => void
+// this mean a function that take two arguments that are number and return nothing
+interface User {
+        username : string;
+        pass : number;
+        func : myfunction;
+
+}
+const myNewObject = {
+        username : 'thebeast01',
+        pass : 239403,
+        func : (n, m ) => {
+                console.log(n + m );
+        }
+}
+
 ```
