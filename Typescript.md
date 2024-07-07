@@ -72,3 +72,36 @@ type funcType = (n : number , m : number ) => number;
                 return n + m ;
         }
 ```
+# Interface
+ its some what similar to `type` but interface is like class we can extend it using extend keyword
+
+```typescript
+        interface User {
+                name : string;
+                email : string;
+                password : string;
+                phone : number;
+        }
+
+        const user  : User {
+                name : 'Saif',
+                email : 'saif@gamil.com',
+                password : '293294389',
+                phone : 9043,
+        }
+        // extending new interface from the exsiting one
+        interface user2  extends User {
+                bachelor : boolean;
+        }
+        // It's like the subclass extended from the class
+
+        // this will contain both values from the User one and from itslef
+        const mynewObj : user2 {
+                name : 'saif',
+                email : 'saif@gmail.com',
+                password : '39043',
+                phone : 90493043,
+                bachelor : ture,
+
+        }
+```
