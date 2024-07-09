@@ -147,3 +147,68 @@ const myNewObject = {
 }
 
 ```
+### Union types in Typescript
+        It is used when you are not sure that what kind of data is going to come, at that time we use Union
+
+````typescript
+
+let score : number | string = 32;
+
+type User = {
+        name : string;
+        id : number;
+}
+type Admin = {
+        username : string;
+        id : number;
+}
+let player : User | Admin  = {
+/*         name : 'Saif',
+        id : 9304, */
+        username : 'Saif',
+        id : 934043,
+}
+
+
+
+
+
+````
+# Interfaces
+        ````typescript
+                interface User {
+                        firstName : string;
+                        lastName : string;
+                        email : string;
+                        password : string;
+                        age : number;
+                }
+                // Usages
+                // First defined the structure of the object then used that structure to tell typescript how myObject will look like and what kind of data it's going to store
+
+                const myObj : User = {
+                        firstName : "Saif",
+                        lastName : 'Mohammad',
+                        email : "mohammadsaifbahraich@gmail.com",
+                        password : "90343",
+                        age : 19,
+                }
+
+        ````
+
+#### Point to be notes : Always try to use more interface instead of type use type only where it is necessary
+
+
+## Enums
+Enums (short for enumerations) in typescript are a feature that allows you to define a set of named constant;
+Syntax
+````typescript
+
+        enum Direction {
+                Up, Down, Left, Right,
+        }
+
+
+````
+
+
